@@ -22,10 +22,9 @@ public class Employee {
     //private Address address;
     //private String trainingStation;
 
-    public Employee(Long id, String name, double salary) {
+    public Employee(String name, double salary) {
         this.name = name;
         this.salary = salary;
-        this.id = id;
     }
 
 }

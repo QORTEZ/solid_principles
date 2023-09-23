@@ -33,8 +33,8 @@ public class EmployeeService {
     }
 
     public List<TrainedEmployee> getTrainedEmployees() {
-        TrainedEmployee te1 = new TrainedEmployee(1L, "John Doe Trained", 6000.00, "Mbagathi");
-        TrainedEmployee te2 = new TrainedEmployee(2L, "Jane Doe Trained", 6000.00, "CBD");
+        TrainedEmployee te1 = new TrainedEmployee( "John Doe Trained", 6000.00, "Mbagathi");
+        TrainedEmployee te2 = new TrainedEmployee("Jane Doe Trained", 6000.00, "CBD");
 
         trainedEmployeesRepository.save(te1);
         trainedEmployeesRepository.save(te2);
