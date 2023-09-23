@@ -9,7 +9,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@Table(name = "address")
+@Table(name = "addresses")
 @AllArgsConstructor
 @NoArgsConstructor
 public class Address {

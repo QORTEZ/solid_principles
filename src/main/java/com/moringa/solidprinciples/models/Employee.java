@@ -1,7 +1,6 @@
 package com.moringa.solidprinciples.models;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -10,9 +9,8 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@Table(name = "employee")
+@Table(name = "employees")
 @NoArgsConstructor
-@AllArgsConstructor
 public class Employee {
 
     @Id
@@ -21,7 +19,13 @@ public class Employee {
     private Long id;
     private String name;
     private double salary;
-    @Transient
-    private Address address;
+    //private Address address;
+    //private String trainingStation;
+
+    public Employee(Long id, String name, double salary) {
+        this.name = name;
+        this.salary = salary;
+        this.id = id;
+    }
 
 }
