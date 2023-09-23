@@ -20,24 +20,14 @@ public class EmployeeService {
     TrainedEmployeesRepository trainedEmployeesRepository;
 
     public List<Employee> getEmployees() {
-        Employee employee1 = new Employee();
-        employee1.setName("John Doe");
-        employee1.setSalary(2000.00);
-        employeeRepository.save(employee1);
-
-        Employee employee2 = new Employee();
-        employee2.setName("Jane Doe");
-        employee2.setSalary(3000.00);
-        employeeRepository.save(employee2);
+        employeeRepository.save(new Employee("John Doe", 2000.00));
+        employeeRepository.save(new Employee("Jane Doe", 2000.00));
         return employeeRepository.findAll();
     }
 
     public List<TrainedEmployee> getTrainedEmployees() {
-        TrainedEmployee te1 = new TrainedEmployee( "John Doe Trained", 6000.00, "Mbagathi");
-        TrainedEmployee te2 = new TrainedEmployee("Jane Doe Trained", 6000.00, "CBD");
-
-        trainedEmployeesRepository.save(te1);
-        trainedEmployeesRepository.save(te2);
+        trainedEmployeesRepository.save(new TrainedEmployee( "John Doe Trained", 6000.00, "Mbagathi"));
+        trainedEmployeesRepository.save(new TrainedEmployee("Jane Doe Trained", 6000.00, "CBD"));
         return trainedEmployeesRepository.findAll();
     }
 }
