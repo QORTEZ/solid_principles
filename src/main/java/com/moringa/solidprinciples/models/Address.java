@@ -6,22 +6,20 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-
 @Getter
 @Setter
 @Entity
-@Table(name = "employee")
-@NoArgsConstructor
+@Table(name = "address")
 @AllArgsConstructor
-public class Employee {
-
+@NoArgsConstructor
+public class Address {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "id", nullable = false)
     private Long id;
-    private String name;
-    private double salary;
-    @Transient
-    private Address address;
+    private String streetName;
 
+    public Address( String streetName){
+        this.streetName = streetName;
+    }
 }
